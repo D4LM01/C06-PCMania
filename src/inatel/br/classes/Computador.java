@@ -1,0 +1,67 @@
+package inatel.br.classes;
+import inatel.br.main.Main;
+public class Computador {
+    private String marca;
+    private float preco;
+    private MemoriaUSB musb;
+    private SistemaOperacional os;
+    private HardwareBasico hardwarebasico;
+    private int memoriacomusb;
+
+    public Computador() {
+        this.hardwarebasico = new HardwareBasico();
+        this.os = new SistemaOperacional();
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public SistemaOperacional getOs() {
+        return os;
+    }
+
+    public HardwareBasico getHardwarebasico() {
+        return hardwarebasico;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
+    public Computador(HardwareBasico hardwarebasico) {
+        this.hardwarebasico = hardwarebasico;
+    }
+
+    public Computador(SistemaOperacional os) {
+        this.os = os;
+    }
+
+    public void setMusb(MemoriaUSB musb) {
+        this.musb = musb;
+    }
+
+    public void mostraPCConfigs(){
+    System.out.println("Configuracoes do PC\n");
+    System.out.println("Marca: " + this.marca);
+    System.out.println("Preco: R$" + this.preco);
+    System.out.println(hardwarebasico.getNome());
+    System.out.println(hardwarebasico.getRam() + "GB de Memoria Ram");
+    System.out.println(hardwarebasico.getCapacidade() + "GB");
+    System.out.println("Sistema Operacional: " + os.getNome() + "(" + os.getTipo() + ")");
+    System.out.println("Acompanha " + musb.getNome() + " de " + musb.getCapacidade() + "GB\n");
+
+    }
+    public int addMemoriaUSB(MemoriaUSB musb){
+        memoriacomusb= musb.getCapacidade()+hardwarebasico.getCapacidade();
+        return memoriacomusb;
+    }
+}
