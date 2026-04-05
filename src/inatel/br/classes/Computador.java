@@ -6,15 +6,10 @@ public class Computador {
     private MemoriaUSB memoriausbs;
     private SistemaOperacional os;
     private HardwareBasico hardwarebasico;
-    private int memoriacomusb;
 
     public Computador() {
         this.hardwarebasico = new HardwareBasico();
         this.os = new SistemaOperacional();
-    }
-
-    public String getMarca() {
-        return marca;
     }
 
     public float getPreco() {
@@ -35,10 +30,6 @@ public class Computador {
 
     public void setPreco(float preco) {
         this.preco = preco;
-    }
-
-    public void setMemoriausbs(MemoriaUSB memoriausbs) {
-        this.memoriausbs = memoriausbs;
     }
 
     public void mostraPCConfigs(){
