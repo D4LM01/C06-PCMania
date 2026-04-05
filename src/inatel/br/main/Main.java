@@ -1,9 +1,7 @@
 package inatel.br.main;
 import inatel.br.classes.Cliente;
 import inatel.br.classes.Computador;
-import inatel.br.classes.HardwareBasico;
 import inatel.br.classes.MemoriaUSB;
-import inatel.br.classes.SistemaOperacional;
 
 import java.util.Scanner;
 public class Main {
@@ -21,7 +19,7 @@ public class Main {
 
     //Associação
     for (int i = 0; i < 3; i++) {
-      pcs[i].setMusb(memoriausb[i]);
+      pcs[i].addMemoriaUSB(memoriausb[i]);
     }
 
     //Info das inatel.br.classes.MemoriaUSB

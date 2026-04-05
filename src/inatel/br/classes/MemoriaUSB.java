@@ -1,5 +1,4 @@
 package inatel.br.classes;
-import inatel.br.main.Main;
 
 public class MemoriaUSB {
     private String nome;

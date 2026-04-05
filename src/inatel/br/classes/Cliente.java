@@ -1,5 +1,4 @@
 package inatel.br.classes;
-import inatel.br.main.Main;
 import java.util.Scanner;
 
 public class Cliente {
